@@ -1,0 +1,184 @@
+/* === Layout === */
+
+.page {
+  padding: var(--section-gap) 0;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* === Back Link === */
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  margin-bottom: var(--space-8);
+  transition: color var(--transition-fast);
+}
+
+.backLink:hover {
+  color: var(--color-primary);
+}
+
+.backLink svg {
+  transition: transform var(--transition-fast);
+}
+
+.backLink:hover svg {
+  transform: translateX(-3px);
+}
+
+/* === Header === */
+
+.header {
+  margin-bottom: var(--space-10);
+}
+
+.headerMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.price {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+/* === Content === */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+/* === Section === */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.sectionTitle {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.sectionText {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+/* === Recommendation Box === */
+
+.recommendationBox {
+  background-color: var(--color-primary-50);
+  border: 1px solid var(--color-primary-200);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+}
+
+.recommendationBox .sectionText {
+  color: var(--color-text);
+}
+
+.recommendationLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+/* === Tips List === */
+
+.tipsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  counter-reset: tips;
+}
+
+.tipItem {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.tipNumber {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.tipText {
+  flex: 1;
+}
+
+/* === Not Found === */
+
+.notFound {
+  text-align: center;
+  padding: var(--space-24) 0;
+}
+
+.notFoundTitle {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.notFoundText {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+/* === Responsive === */
+
+@media (max-width: 640px) {
+  .title {
+    font-size: var(--text-2xl);
+  }
+
+  .headerMeta {
+    flex-wrap: wrap;
+  }
+}

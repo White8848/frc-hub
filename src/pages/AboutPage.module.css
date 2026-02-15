@@ -1,0 +1,237 @@
+/* ============================
+   About Page
+   ============================ */
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: var(--space-24) var(--container-padding) var(--space-16);
+  background: var(--gradient-hero);
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.heroDescription {
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+/* ---------- Shared section ---------- */
+
+.section {
+  padding: var(--section-gap) var(--container-padding);
+}
+
+.sectionAlt {
+  composes: section;
+  background-color: var(--color-bg-secondary);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.containerWide {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+/* ---------- Prose ---------- */
+
+.prose {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ---------- Features grid ---------- */
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.featureIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-2xl);
+  flex-shrink: 0;
+}
+
+.featureTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.featureDescription {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- Mission highlight ---------- */
+
+.missionHighlight {
+  background: var(--gradient-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10) var(--space-8);
+  text-align: center;
+}
+
+.missionQuote {
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ---------- Contact ---------- */
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.contactIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xl);
+  flex-shrink: 0;
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.contactLabel {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.contactValue {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  margin: 0;
+  font-weight: 500;
+}
+
+.contactLink {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.contactLink:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: var(--space-16) var(--container-padding) var(--space-12);
+  }
+
+  .heroTitle {
+    font-size: var(--text-4xl);
+  }
+
+  .heroDescription {
+    font-size: var(--text-lg);
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .missionHighlight {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .missionQuote {
+    font-size: var(--text-lg);
+  }
+}
