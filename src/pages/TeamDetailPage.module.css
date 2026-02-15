@@ -1,0 +1,325 @@
+/* ---------- TeamDetailPage ---------- */
+
+.page {
+  padding: var(--space-12) 0 var(--section-gap);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* ---------- Back link ---------- */
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  margin-bottom: var(--space-6);
+  transition: color var(--transition-fast);
+}
+
+.backLink:hover {
+  color: var(--color-primary);
+}
+
+.backArrow {
+  font-size: var(--text-base);
+  line-height: 1;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  margin-bottom: var(--space-8);
+}
+
+.headerTop {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.teamNumber {
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  color: var(--color-primary);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.teamName {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 var(--space-4);
+  line-height: 1.2;
+}
+
+.teamMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.metaIcon {
+  font-size: var(--text-base);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ---------- Description ---------- */
+
+.descriptionSection {
+  margin-bottom: var(--space-10);
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+}
+
+.sectionTitle {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--space-4);
+}
+
+.description {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ---------- Events Section ---------- */
+
+.eventsSection {
+  margin-bottom: var(--space-8);
+}
+
+.eventsSectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.yearSelector {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.yearButton {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.yearButton:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary-200);
+  background: var(--color-primary-50);
+}
+
+.yearButtonActive {
+  color: var(--color-text-on-primary);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.yearButtonActive:hover {
+  color: var(--color-text-on-primary);
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+/* ---------- Event List (Timeline) ---------- */
+
+.eventList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.eventCard {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-4);
+  text-decoration: none;
+  color: inherit;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.eventCard:hover {
+  background: var(--color-bg-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Timeline decoration */
+
+.eventTimeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20px;
+  padding-top: var(--space-2);
+}
+
+.timelineDot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.timelineLine {
+  width: 2px;
+  flex: 1;
+  background: var(--color-border);
+  margin-top: var(--space-2);
+}
+
+.eventCard:last-child .timelineLine {
+  display: none;
+}
+
+/* Event content */
+
+.eventContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+  min-width: 0;
+}
+
+.eventName {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.eventMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.eventLocation {
+  color: var(--color-text-secondary);
+}
+
+.eventArrow {
+  display: flex;
+  align-items: center;
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  transition: color var(--transition-fast);
+}
+
+.eventCard:hover .eventArrow {
+  color: var(--color-primary);
+}
+
+/* ---------- Loading / Error ---------- */
+
+.centered {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-16) 0;
+}
+
+.error {
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-danger-light);
+  background: rgba(239, 68, 68, 0.04);
+}
+
+.errorTitle {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-danger);
+  margin: 0 0 var(--space-2);
+}
+
+.errorMessage {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-2);
+}
+
+.errorHint {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .page {
+    padding: var(--space-8) 0 var(--section-gap);
+  }
+
+  .teamNumber {
+    font-size: var(--text-3xl);
+  }
+
+  .teamName {
+    font-size: var(--text-2xl);
+  }
+
+  .teamMeta {
+    gap: var(--space-3);
+  }
+
+  .eventsSectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .eventCard {
+    padding: var(--space-3) var(--space-3);
+  }
+}
