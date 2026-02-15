@@ -1,0 +1,115 @@
+.section {
+  background: var(--gradient-primary);
+  padding: var(--space-24) 0;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-6);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+/* ---------- CTA Buttons ---------- */
+
+.buttonPrimary,
+.buttonOutline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-base);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: var(--transition-base);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.buttonPrimary {
+  background-color: #ffffff;
+  color: var(--color-primary);
+}
+
+.buttonPrimary:hover {
+  background-color: var(--color-primary-50);
+  box-shadow: var(--shadow-md);
+}
+
+.buttonPrimary:active {
+  transform: translateY(1px);
+}
+
+.buttonOutline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.buttonOutline:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.buttonOutline:active {
+  transform: translateY(1px);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 639px) {
+  .section {
+    padding: var(--space-16) 0;
+  }
+
+  .title {
+    font-size: var(--text-2xl);
+  }
+
+  .description {
+    font-size: var(--text-base);
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .buttonPrimary,
+  .buttonOutline {
+    width: 100%;
+    justify-content: center;
+  }
+}
