@@ -1,0 +1,148 @@
+/* ---------- MatchCard ---------- */
+
+.card {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.matchTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.matchTime {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* ---------- Alliances ---------- */
+
+.alliances {
+  display: flex;
+  flex-direction: column;
+}
+
+.alliance {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  gap: var(--space-3);
+}
+
+.allianceRed {
+  composes: alliance;
+  background: rgba(239, 68, 68, 0.04);
+  border-left: 3px solid var(--color-red-alliance);
+}
+
+.allianceBlue {
+  composes: alliance;
+  background: rgba(37, 99, 235, 0.04);
+  border-left: 3px solid var(--color-blue-alliance);
+}
+
+.allianceWinner {
+  font-weight: 700;
+}
+
+.allianceWinner.allianceRed {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.allianceWinner.allianceBlue {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+/* ---------- Teams ---------- */
+
+.teams {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+  min-width: 0;
+}
+
+.teamNumber {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.allianceRed .teamNumber {
+  color: var(--color-red-alliance);
+}
+
+.allianceBlue .teamNumber {
+  color: var(--color-blue-alliance);
+}
+
+/* ---------- Score ---------- */
+
+.score {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  min-width: 3ch;
+  text-align: right;
+  color: var(--color-text-secondary);
+}
+
+.allianceRed .score {
+  color: var(--color-red-alliance);
+}
+
+.allianceBlue .score {
+  color: var(--color-blue-alliance);
+}
+
+.allianceWinner .score {
+  font-size: var(--text-xl);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .teams {
+    gap: var(--space-1);
+  }
+
+  .teamNumber {
+    font-size: var(--text-xs);
+    padding: 2px var(--space-1);
+  }
+
+  .score {
+    font-size: var(--text-base);
+  }
+
+  .allianceWinner .score {
+    font-size: var(--text-lg);
+  }
+}
