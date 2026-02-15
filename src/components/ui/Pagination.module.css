@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.pages {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1, 4px);
+}
+
+/* ---------- Shared button base ---------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1, 4px);
+  padding: 0;
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  user-select: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ---------- Page number buttons ---------- */
+
+.page {
+  width: 36px;
+  height: 36px;
+}
+
+.page:hover {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-primary-100);
+  color: var(--color-primary);
+}
+
+.page:active {
+  transform: translateY(1px);
+}
+
+.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+/* ---------- Nav buttons (Prev / Next) ---------- */
+
+.nav {
+  padding: var(--space-2) var(--space-3);
+  height: 36px;
+}
+
+.nav:hover {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-primary-100);
+  color: var(--color-primary);
+}
+
+.nav:active {
+  transform: translateY(1px);
+}
+
+.navLabel {
+  font-size: var(--text-sm);
+}
+
+/* ---------- Ellipsis ---------- */
+
+.ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  user-select: none;
+}
